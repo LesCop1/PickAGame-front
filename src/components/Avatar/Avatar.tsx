@@ -13,7 +13,7 @@ const avatarVariants = cva(
         md: "size-pag-sizing-400",
       },
       type: {
-        user: "",
+        user: "object-cover",
         "positive-count": "bg-pag-bg-secondary text-pag-text-primary",
         "negative-count":
           "border-pag-border-tag-downvotecount bg-pag-bg-tag-downvotecount text-pag-text-tag-downvotecount",
