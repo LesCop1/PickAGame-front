@@ -68,9 +68,9 @@
   --color-pag-icon-award: #ddc40b;
 
   /* Rounding */
-  --radius-pag-rounded-sm: 8px;
-  --radius-pag-rounded-main: 16px;
-  --radius-pag-rounded-full: 9999px;
+  --radius-pag-sm: 8px;
+  --radius-pag-main: 16px;
+  --radius-pag-full: 9999px;
 
   /* Spacing */
   --spacing-pag-spacing-1: 1px;
@@ -108,15 +108,10 @@
   --font-family-pag-default: "Quicksand", sans-serif;
 
   /* Font sizes */
-  --font-size-pag-typo-size-xs: 12px;
-  --font-size-pag-typo-size-sm: 14px;
-  --font-size-pag-typo-size-md: 16px;
-  --font-size-pag-typo-size-lg: 18px;
-  --font-size-pag-typo-size-xl: 20px;
-  --font-size-pag-typo-size-2xl: 32px;
-}
-
-@utility text-pag-* {
-  font-family: var(--font-family-pag-default);
-  font-size: --value(--font-size-pag-typo-size-*);
+  --text-pag-xs: 12px;
+  --text-pag-sm: 14px;
+  --text-pag-md: 16px;
+  --text-pag-lg: 18px;
+  --text-pag-xl: 20px;
+  --text-pag-2xl: 32px;
 }
