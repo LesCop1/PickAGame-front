@@ -68,9 +68,9 @@
   --color-pag-icon-award: #ddc40b;
 
   /* Rounding */
-  --spacing-pag-rounded-sm: 8px;
-  --spacing-pag-rounded-main: 16px;
-  --spacing-pag-rounded-full: 9999px;
+  --radius-pag-rounded-sm: 8px;
+  --radius-pag-rounded-main: 16px;
+  --radius-pag-rounded-full: 9999px;
 
   /* Spacing */
   --spacing-pag-spacing-1: 1px;
