@@ -2,14 +2,19 @@ import { Coffee, Github } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col gap-50 items-center w-fit text-pag-extra-small">
-      <a href="https://github.com/LesCop1/PickAGame-front" target="_blank" rel="noopener noreferrer" className="flex gap-50 items-center">
-        <Github strokeWidth={1} size={16} className="text-icon-primary-hover" />
-        <span className="text-text-muted">Github</span>
+    <footer className="flex w-fit flex-col items-center gap-pag-spacing-50 text-pag-xs">
+      <a
+        href="https://github.com/LesCop1/PickAGame-front"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-pag-spacing-50"
+      >
+        <Github strokeWidth={1} size={16} className="text-pag-icon-primary-hover" />
+        <span className="text-pag-text-muted">Github</span>
       </a>
-      <a href="#" target="_blank" rel="noopener noreferrer" className="flex gap-50 items-center">
-        <Coffee strokeWidth={1} size={16} className="text-icon-primary-hover" />
-        <span className="text-text-muted">Buy us a coffee</span>
+      <a href="#" target="_blank" rel="noopener noreferrer" className="flex items-center gap-pag-spacing-50">
+        <Coffee strokeWidth={1} size={16} className="text-pag-icon-primary-hover" />
+        <span className="text-pag-text-muted">Buy us a coffee</span>
       </a>
     </footer>
   );
