@@ -91,7 +91,6 @@ const twMerge = extendTailwindMerge({
         "pag-sizing-800",
       ],
       font: ["pag-default"],
-      ],
       text: ["pag-xs", "pag-sm", "pag-md", "pag-lg", "pag-xl", "pag-2xl"],
     },
   },
