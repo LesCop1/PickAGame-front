@@ -1,3 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-border-secondary: #000000;
+  --color-orange-500: #f59e0b;
+  --color-bg-primary: #0b0f14;
+  --color-bg-tertiary: #111827;
+  --color-text-primary: #e6edf7;
+  --color-bg-secondary: #172033;
+  --color-violet-300: #c4b5fd;
+  --color-violet-400: #a78bfa;
+  --color-violet-500: #8b5cf6;
+  --color-violet-600: #7c3aed;
+  --color-violet-700: #6d28d9;
+  --color-teal-300: #5eead4;
+  --color-teal-400: #2dd4bf;
+  --color-teal-500: #14b8a6;
+  --color-teal-600: #0d9488;
+  --color-teal-700: #0f766e;
+  --color-green-500: #22c55e;
+  --color-green-600: #16a34a;
+  --color-red-500: #ef4444;
+  --color-red-600: #dc2626;
+  --color-orange-600: #d97706;
+  --color-text-muted: #a6b1c2;
+  --color-bg-tag-short: #14b8a614;
+  --color-border-tag-short: #14b8a680;
+  --color-text-tag-short: #000000;
+  --color-scrollbar-track: #000000;
+  --color-scrollbar-thumb: #243244;
+  --color-slate-800: #1f2937;
+  --color-slate-700: #334155;
+  --color-slate-600: #475569;
+  --color-slate-500: #64748b;
+  --color-slate-400: #94a3b8;
+  --color-slate-300: #cbd5e1;
+  --color-blue-500: #3b82f6;
+  --color-blue-400: #60a5fa;
+  --color-blue-800: #1e40af;
+  --color-blue-700: #1d4ed8;
+  --color-blue-600: #2563eb;
+  --color-blue-300: #93c5fd;
+  --color-blue-electric: #003cbe;
+  --color-bg-accent: #000000;
+  --color-bg-tag-playercount: #3b82f61a;
+  --color-border-tag-playercount: #3b82f666;
+  --color-text-tag-playercount: #93c5fd;
+  --color-border-primary: #000000;
+  --color-bg-tag-downvotecount: #ef44441a;
+  --color-border-tag-downvotecount: #ef444466;
+  --color-text-tag-downvotecount: #fca5a5;
+  --color-icon-success: #1e9c04;
+  --color-icon-success-hover: #1e9c0480;
+  --color-icon-error: #dc2626;
+  --color-bg-tag-long: #a78bfa14;
+  --color-border-tag-long: #a78bfa80;
+  --color-text-tag-long: #000000;
+  --color-border-tag-flex: #38bdf880;
+  --color-bg-tag-flex: #38bdf814;
+  --color-text-tag-flex: #7dd3fc;
+  --color-bg-error: #dc2626;
+  --color-icon-primary-hover: #a6b1c2;
+  --color-icon-primary: #e6edf7;
+  --color-bg-success: #1e9c04;
+  --color-bg-tag-interested: #22c55e14;
+  --color-border-tag-interested: #22c55e66;
+  --color-text-tag-interested: #86efac;
+  --color-icon-tag-interested: #22c55e;
+  --color-bg-tag-not-interested: #ef444414;
+  --color-text-tag-not-interested: #fca5a5;
+  --color-border-tag-not-interested: #ef444466;
+  --color-icon-error-disabled: #d45656;
+  --color-text-success: #3cc720;
+  --color-text-error: #cd1b1b;
+  --color-bg-error-light: #dc26261a;
+  --color-bg-success-light: #1e9c041a;
+  --color-border-error: #cd1212;
+  --color-border-error-light: #cd121280;
+  --color-border-success: #2cc00d;
+  --color-border-success-light: #2cc00d80;
+  --color-icon-stat: #76c6ff;
+  --color-border-tag: #10598d;
+  --color-icon-award: #ddc40b;
+  --spacing-rounded-main: 16px;
+  --spacing-rounded-full: 9999px;
+  --spacing-rounded-sm: 8px;
+
+  --spacing-100: 8px;
+  --spacing-25: 2px;
+  --spacing-50: 4px;
+  --spacing-75: 6px;
+  --spacing-200: 16px;
+  --spacing-300: 24px;
+  --spacing-400: 32px;
+  --spacing-1: 1px;
+  --spacing-500: 40px;
+  --spacing-600: 48px;
+  --spacing-typo-size-h1: 32px;
+  --spacing-typo-size-h2: 20px;
+  --spacing-typo-size-h3: 18px;
+  --spacing-typo-size-h1-height: 36px;
+  --spacing-typo-size-h2-height: 24px;
+  --spacing-typo-size-h3-height: 22px;
+  --spacing-150: 12px;
+  --spacing-800: 64px;
+  --spacing-sizing-1: 1px;
+  --spacing-sizing-25: 2px;
+  --spacing-sizing-50: 4px;
+  --spacing-sizing-75: 6px;
+  --spacing-sizing-100: 8px;
+  --spacing-sizing-150: 12px;
+  --spacing-sizing-200: 16px;
+  --spacing-sizing-300: 24px;
+  --spacing-sizing-400: 32px;
+  --spacing-sizing-500: 40px;
+  --spacing-sizing-600: 48px;
+  --spacing-sizing-800: 64px;
+  --spacing-125: 10px;
+  --font-size-typo-size-lg: 18px;
+  --font-size-typo-size-md: 16px;
+  --font-size-typo-size-sm: 14px;
+  --font-family-default: "Quicksand";
+}
+
+@utility text-pag-small {
+  font-size: var(--font-size-typo-size-sm);
+  font-family: var(--font-family-default);
+}
+
+@utility text-pag-extra-small {
+  font-size: 12px;
+  font-family: var(--font-family-default);
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
