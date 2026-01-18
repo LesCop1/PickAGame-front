@@ -14,7 +14,7 @@ const badgeVariant = cva(
   },
 );
 
-interface Props extends VariantProps<typeof badgeVariant> {
+export interface Props extends VariantProps<typeof badgeVariant> {
   type: "sessionShort" | "sessionLong" | "sessionFlex";
 }
 
