@@ -1,0 +1,23 @@
+{
+  "files.autoSave": "afterDelay",
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript", // Enable .ts
+    "typescriptreact" // Enable .tsx
+  ],
+  "tailwindCSS.classFunctions": ["cva", "cx"],
+  "tailwindCSS.experimental.classRegex": [
+    "\\/\\*\\s?tw:\\s?\\*\\/\\s?'(.*)'",
+    "tw-start([\\w\\W]*?)tw-end",
+    "[cC][lL][aA][sS][sS].+[\"'`](.*)[\"'`]",
+    "[sS][tT][yY][lL][eE].+[\"'`](.*)[\"'`]",
+    "twJoin\\([\\w\\W]*?\\)",
+    "twMerge\\([\\w\\W]*?\\)"
+  ]
+}
