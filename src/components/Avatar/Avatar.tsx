@@ -31,7 +31,7 @@ export interface Props extends VariantProps<typeof avatarVariants> {
   value?: number | string;
 }
 
-export default function Avatar({ src, value, type, size }: Props) {
+export default function Avatar({ src, value, type = "user", size }: Props) {
   if (type === "user" && src) {
     return <img src={src} alt={String(value)} className={avatarVariants({ size, type })} />;
   }

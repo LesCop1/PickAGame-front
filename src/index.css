@@ -115,3 +115,7 @@
   --text-pag-xl: 20px;
   --text-pag-2xl: 32px;
 }
+
+:root {
+  @apply font-family-pag-default bg-pag-bg-primary;
+}
