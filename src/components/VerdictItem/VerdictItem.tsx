@@ -10,8 +10,8 @@ interface Props extends AvatarProps {
 const verdictItemVariants = cva("flex w-full justify-between rounded-pag-sm border p-pag-spacing-50", {
   variants: {
     interested: {
-      false: "border-pag-border-success-light bg-pag-bg-success-light",
-      true: "border-pag-border-error-light bg-pag-bg-error-light",
+      true: "border-pag-border-success-light bg-pag-bg-success-light",
+      false: "border-pag-border-error-light bg-pag-bg-error-light",
     },
   },
 });
@@ -23,10 +23,10 @@ export default function VerdictItem({ interested, achievementsProgress, value, .
         <Avatar size={"sm"} value={value} {...avatarProps} />
         <span className="text-pag-md text-pag-text-primary">{value}</span>
       </div>
-      {achievementsProgress && (
+      {achievementsProgress !== undefined && (
         <div className="flex items-center">
           <span className="text-pag-sm text-pag-text-primary">{achievementsProgress}%</span>
-          <Award size={20} strokeWidth={1} className={interested ? "text-pag-icon-error" : "text-pag-icon-success"} />
+          <Award size={20} strokeWidth={1} className={interested ? "text-pag-icon-success" : "text-pag-icon-error"} />
         </div>
       )}
     </div>
