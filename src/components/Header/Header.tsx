@@ -4,8 +4,10 @@ import pagLogo from "../../assets/logo_full.png";
 export default function Header() {
   return (
     <header
-      className="py-pag-spacing-100 pl-pag-spacing-150 pr-pag-spacing-300 bg-pag-bg-tertiary text-pag-text-primary flex w-dvw items-center justify-between
-text-pag-lg"
+      className="
+        flex w-screen items-center justify-between bg-pag-bg-tertiary py-pag-spacing-100 pr-pag-spacing-300
+        pl-pag-spacing-150 text-pag-lg text-pag-text-primary
+      "
     >
       <a href="#">
         <img src={pagLogo} alt="PickAGame Logo" className="h-pag-sizing-800 w-auto" />

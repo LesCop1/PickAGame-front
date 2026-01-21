@@ -21,7 +21,12 @@ export interface Props {
 
 export default function GameCard({ imageUrl, name, owned, sessionType, maxPlayers, likedBy, dislikedBy }: Props) {
   return (
-    <div className="w-[225px] overflow-hidden rounded-pag-main bg-pag-bg-secondary p-pag-spacing-25">
+    <div
+      className="
+        relative w-[225px] overflow-hidden rounded-pag-main bg-pag-bg-secondary p-pag-spacing-25 transition-all
+        hover:z-50 hover:scale-105
+      "
+    >
       <div className="relative h-[200px] w-full">
         <div className="group relative size-full">
           <img src={imageUrl} alt={name} className="size-full rounded-t-pag-main object-cover" />
@@ -33,7 +38,8 @@ export default function GameCard({ imageUrl, name, owned, sessionType, maxPlayer
           >
             <div
               className="
-                flex h-full w-[calc((100%-2px)/2)] items-center justify-center bg-pag-bg-success/20 transition-all
+                flex h-full w-[calc((100%-2px)/2)] items-center justify-center rounded-tl-pag-main bg-pag-bg-success/20
+                transition-all
                 hover:w-[75%] hover:bg-pag-bg-success/50
               "
             >
@@ -42,7 +48,8 @@ export default function GameCard({ imageUrl, name, owned, sessionType, maxPlayer
             <div className="h-full w-[2px] bg-pag-bg-secondary" />
             <div
               className="
-                flex h-full w-[calc((100%-2px)/2)] items-center justify-center bg-pag-bg-error/20 transition-all
+                flex h-full w-[calc((100%-2px)/2)] items-center justify-center rounded-tr-pag-main bg-pag-bg-error/20
+                transition-all
                 hover:w-[75%] hover:bg-pag-bg-error/50
               "
             >
