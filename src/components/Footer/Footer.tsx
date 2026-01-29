@@ -1,8 +1,15 @@
 import { Coffee, Github } from "lucide-react";
+import { cn } from "../../utils/cn";
 
-export default function Footer() {
+export default function Footer({ dir = "vertical", className }: { dir?: "horizontal" | "vertical"; className?: string }) {
   return (
-    <footer className="flex w-fit flex-col items-center gap-pag-spacing-50 text-pag-xs">
+    <footer
+      className={cn(
+        "flex w-fit items-center gap-pag-spacing-50 text-pag-xs",
+        dir === "horizontal" ? "w-full flex-row justify-evenly" : "flex-col",
+        className,
+      )}
+    >
       <a
         href="https://github.com/LesCop1/PickAGame-front"
         target="_blank"

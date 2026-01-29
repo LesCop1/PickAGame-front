@@ -1,9 +1,10 @@
 import { Eraser, Plus } from "lucide-react";
-import Divider from "./components/Divider/Divider";
-import Footer from "./components/Footer/Footer";
-import Header from "./components/Header/Header";
-import GameCard from "./components/GameCard/GameCard";
+import Divider from "../components/Divider/Divider";
+import Footer from "../components/Footer/Footer";
+import Header from "../components/Header/Header";
+import GameCard from "../components/GameCard/GameCard";
 
+// Temp mockup data
 const mockupGames = Array.from({ length: 25 }).map((_, i) => ({
   id: i,
   imageUrl: `https://picsum.photos/seed/${i}/225/200`,
@@ -21,12 +22,27 @@ const mockupGames = Array.from({ length: 25 }).map((_, i) => ({
   })),
 }));
 
-export default function App() {
+export default function Dashboard() {
   return (
-    <main className="flex h-dvh flex-col items-center gap-pag-spacing-800 pb-pag-spacing-800">
+    <div
+      className="
+        flex h-dvh flex-col items-center gap-pag-spacing-200 pb-pag-spacing-200
+        lg:gap-pag-spacing-800 lg:pb-pag-spacing-800
+      "
+    >
       <Header />
-      <div className="flex flex-1 gap-pag-spacing-300 overflow-hidden">
-        <div className="flex flex-col justify-between">
+      <main
+        className="
+          mx-pag-spacing-200 flex flex-1 gap-pag-spacing-300 overflow-hidden
+          lg:mx-pag-spacing-400
+        "
+      >
+        <div
+          className="
+            hidden flex-col justify-between
+            lg:flex
+          "
+        >
           <aside className="flex flex-col gap-pag-spacing-300">
             <div className="flex items-center justify-between">
               <h2 className="text-pag-2xl font-bold">Filters</h2>
@@ -45,12 +61,29 @@ export default function App() {
             <Footer />
           </footer>
         </div>
-        <Divider direction="vertical" />
-        <section className="flex w-[1215px] flex-col gap-pag-spacing-300">
+        <Divider
+          direction="vertical"
+          className="
+            hidden
+            lg:block
+          "
+        />
+        <section
+          className="
+            flex flex-col gap-pag-spacing-200
+            lg:gap-pag-spacing-300
+          "
+        >
           <div className="flex flex-col gap-pag-spacing-100">
-            <div className="flex items-center justify-between">
-              <h3>32 games with 0 filters and for 2 people</h3>
-              <button className="flex items-center rounded-pag-sm bg-pag-bg-accent p-pag-spacing-100 text-pag-md hover:bg-pag-bg-accent-light transition-colors">
+            <div className="flex items-center justify-between gap-pag-spacing-100">
+              <h3 className="text-pag-md">32 games with 0 filters and for 2 people</h3>
+              <button
+                className="
+                  flex items-center rounded-pag-sm bg-pag-bg-accent p-pag-spacing-100 text-pag-md whitespace-nowrap
+                  transition-colors
+                  hover:bg-pag-bg-accent-light
+                "
+              >
                 <Plus size={16} strokeWidth={1} />
                 Add a game
               </button>
@@ -59,14 +92,14 @@ export default function App() {
           </div>
           <div
             className="
-              -my-pag-spacing-100 -ml-pag-spacing-100 flex-1 overflow-x-hidden overflow-y-auto py-pag-spacing-100
-              pl-pag-spacing-75
+              flex-1 overflow-x-hidden overflow-y-auto pr-pag-spacing-200 pl-pag-spacing-75
+              lg:-my-pag-spacing-100 lg:-ml-pag-spacing-100 lg:py-pag-spacing-100
               [&::-webkit-scrollbar]:w-pag-sizing-50
               [&::-webkit-scrollbar-thumb]:rounded-pag-full [&::-webkit-scrollbar-thumb]:bg-pag-scrollbar-thumb
               [&::-webkit-scrollbar-track]:rounded-pag-full [&::-webkit-scrollbar-track]:bg-pag-scrollbar-track
             "
           >
-            <div className="flex flex-wrap gap-pag-spacing-200">
+            <div className="flex max-w-[1200px] flex-wrap justify-center gap-pag-spacing-200">
               {mockupGames.map((game) => (
                 <GameCard
                   key={game.id}
@@ -83,8 +116,16 @@ export default function App() {
           </div>
 
           <Divider />
+
+          <Footer
+            className="
+              self-center
+              lg:hidden
+            "
+            dir="horizontal"
+          />
         </section>
-      </div>
-    </main>
+      </main>
+    </div>
   );
 }

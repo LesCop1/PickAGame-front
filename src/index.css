@@ -15,6 +15,7 @@
   --color-pag-bg-error: #dc2626;
   --color-pag-bg-error-light: #dc26261a;
   --color-pag-bg-accent: #003cbe;
+  --color-pag-bg-accent-light: #3961b6;
   --color-pag-bg-tag-flex: #38bdf814;
   --color-pag-bg-tag-short: #14b8a614;
   --color-pag-bg-tag-playercount: #3b82f61a;
@@ -117,5 +118,5 @@
 }
 
 :root {
-  @apply font-family-pag-default bg-pag-bg-primary;
+  @apply bg-pag-bg-primary text-pag-text-primary font-family-pag-default;
 }
