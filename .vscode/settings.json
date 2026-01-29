@@ -19,5 +19,14 @@
     "[sS][tT][yY][lL][eE].+[\"'`](.*)[\"'`]",
     "twJoin\\([\\w\\W]*?\\)",
     "twMerge\\([\\w\\W]*?\\)"
-  ]
+  ],
+  "files.readonlyInclude": {
+    "**/routeTree.gen.ts": true
+  },
+  "files.watcherExclude": {
+    "**/routeTree.gen.ts": true
+  },
+  "search.exclude": {
+    "**/routeTree.gen.ts": true
+  }
 }
