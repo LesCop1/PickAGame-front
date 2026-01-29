@@ -1,0 +1,6 @@
+.vscode
+public
+node_modules
+dist
+.env
+**/routeTree.gen.ts

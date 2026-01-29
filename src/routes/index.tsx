@@ -1,8 +1,21 @@
+import { createFileRoute } from "@tanstack/react-router";
 import { Eraser, Plus } from "lucide-react";
 import Divider from "../components/Divider/Divider";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import GameCard from "../components/GameCard/GameCard";
+
+export const Route = createFileRoute("/")({
+  component: Dashboard,
+  beforeLoad: () => {
+    const userLogged = true;
+    if (!userLogged) {
+      throw Route.redirect({
+        to: "/login",
+      });
+    }
+  },
+});
 
 // Temp mockup data
 const mockupGames = Array.from({ length: 25 }).map((_, i) => ({
