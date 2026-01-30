@@ -25,7 +25,7 @@ export default defineConfig([
     files: ["**/*.[j|t]sx"],
     extends: [eslintPluginBetterTailwindcss.configs.recommended],
     rules: {
-      "better-tailwindcss/enforce-consistent-line-wrapping": ["warn", { printWidth: 120 }],
+      "better-tailwindcss/enforce-consistent-line-wrapping": ["warn", { printWidth: 120, lineBreakStyle: "windows" }],
     },
     settings: {
       "better-tailwindcss": {
