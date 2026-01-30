@@ -120,3 +120,7 @@
 :root {
   @apply bg-pag-bg-primary text-pag-text-primary font-family-pag-default;
 }
+
+@utility styled-scrollbar {
+  @apply [&::-webkit-scrollbar]:w-pag-sizing-50 [&::-webkit-scrollbar-thumb]:rounded-pag-full [&::-webkit-scrollbar-thumb]:bg-pag-scrollbar-thumb [&::-webkit-scrollbar-track]:rounded-pag-full [&::-webkit-scrollbar-track]:bg-pag-scrollbar-track;
+}
