@@ -1,9 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Eraser, Plus } from "lucide-react";
+import { Plus } from "lucide-react";
 import Divider from "../components/Divider/Divider";
+import FilterSidebar from "../components/Filters/FilterSidebar";
 import Footer from "../components/Footer/Footer";
-import Header from "../components/Header/Header";
 import GameCard from "../components/GameCard/GameCard";
+import Header from "../components/Header/Header";
 
 export const Route = createFileRoute("/")({
   component: Dashboard,
@@ -56,19 +57,7 @@ export default function Dashboard() {
             lg:flex
           "
         >
-          <aside className="flex flex-col gap-pag-spacing-300">
-            <div className="flex items-center justify-between">
-              <h2 className="text-pag-2xl font-bold">Filters</h2>
-              <div className="rounded-pag-full bg-pag-bg-secondary p-pag-spacing-50">
-                <Eraser size={20} strokeWidth={1} className="text-pag-icon-primary" />
-              </div>
-            </div>
-            <div>
-              <div>Session length</div>
-              <div>Max players</div>
-              <div className="w-[250px]">Players</div>
-            </div>
-          </aside>
+          <FilterSidebar />
           <footer className="flex flex-col items-center gap-pag-spacing-200">
             <Divider />
             <Footer />
@@ -105,11 +94,8 @@ export default function Dashboard() {
           </div>
           <div
             className="
-              flex-1 overflow-x-hidden overflow-y-auto pr-pag-spacing-200 pl-pag-spacing-75
+              styled-scrollbar flex-1 overflow-x-hidden overflow-y-auto pr-pag-spacing-200 pl-pag-spacing-75
               lg:-my-pag-spacing-100 lg:-ml-pag-spacing-100 lg:py-pag-spacing-100
-              [&::-webkit-scrollbar]:w-pag-sizing-50
-              [&::-webkit-scrollbar-thumb]:rounded-pag-full [&::-webkit-scrollbar-thumb]:bg-pag-scrollbar-thumb
-              [&::-webkit-scrollbar-track]:rounded-pag-full [&::-webkit-scrollbar-track]:bg-pag-scrollbar-track
             "
           >
             <div className="flex max-w-[1200px] flex-wrap justify-center gap-pag-spacing-200">
