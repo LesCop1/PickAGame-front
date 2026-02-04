@@ -70,11 +70,21 @@ function ToggleGroupHighlight({ children, transition, className }: ToggleGroupHi
 
 function ToggleGroupItem({ children, className, value, ...props }: ToggleGroupPrimitive.ToggleGroupItemProps) {
   return (
-    <ToggleGroupPrimitive.Item value={value} data-value={value} className={cn("relative z-10", className)} {...props}>
+    <ToggleGroupPrimitive.Item
+      value={value}
+      data-value={value}
+      className={cn(
+        `
+          relative z-10 transition-colors select-none
+          hover:text-pag-text-muted
+        `,
+        className,
+      )}
+      {...props}
+    >
       {children}
     </ToggleGroupPrimitive.Item>
   );
 }
 
 export { ToggleGroup, ToggleGroupHighlight, ToggleGroupItem };
-

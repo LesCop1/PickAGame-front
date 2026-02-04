@@ -13,7 +13,7 @@ export default function SelectItem({ src, name, selected, ...rest }: Props & Rea
     <div
       className="
         group flex w-full cursor-pointer items-center justify-between rounded-pag-sm bg-pag-bg-primary p-pag-spacing-25
-        font-family-pag-default text-pag-md transition-colors
+        font-family-pag-default text-pag-md transition-colors select-none
         hover:bg-pag-bg-tertiary
       "
       {...rest}
