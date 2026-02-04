@@ -7,7 +7,7 @@ import { defineConfig, globalIgnores } from "eslint/config";
 import eslintPluginBetterTailwindcss from "eslint-plugin-better-tailwindcss";
 
 export default defineConfig([
-  globalIgnores(["dist"]),
+  globalIgnores(["dist", "**/routeTree.gen.ts"]),
   {
     files: ["**/*.{ts,tsx}"],
     extends: [
