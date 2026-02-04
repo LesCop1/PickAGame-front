@@ -1,30 +1,30 @@
 import { Check, X } from "lucide-react";
-import Avatar from "../Avatar/Avatar";
 import { cn } from "../../utils/cn";
+import Avatar from "../Avatar/Avatar";
 
 type Props = {
-  size: "sm" | "md";
   src: string;
   name: string;
   selected: boolean;
 };
 
-export default function SelectItem({ size, src, name, selected }: Props) {
+export default function SelectItem({ src, name, selected, ...rest }: Props & React.HTMLAttributes<HTMLDivElement>) {
   return (
     <div
       className="
         group flex w-full cursor-pointer items-center justify-between rounded-pag-sm bg-pag-bg-primary p-pag-spacing-25
-        font-family-pag-default text-pag-md
+        font-family-pag-default text-pag-md transition-colors select-none
         hover:bg-pag-bg-tertiary
       "
+      {...rest}
     >
       <div className="flex w-fit gap-pag-spacing-50">
-        <Avatar size={size} src={src} />
-        <span className="text-pag-text-primary">{name}</span>
+        <Avatar size={"sm"} src={src} />
+        <span>{name}</span>
       </div>
-      <X strokeWidth={1 / 2} size={16} className={cn("hidden text-pag-icon-error", selected && "group-hover:block")} />
+      <X strokeWidth={1} size={16} className={cn("hidden text-pag-icon-error", selected && "group-hover:block")} />
       <Check
-        strokeWidth={1 / 2}
+        strokeWidth={1}
         size={16}
         className={cn(
           "hidden",
