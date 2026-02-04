@@ -1,26 +1,22 @@
+import { Slot } from "@radix-ui/react-slot";
 import { cn } from "../../utils/cn";
 
-type Props = {
-  text: string;
-  logo?: string;
-  color?: string;
-  href?: string;
-};
-
-export default function Button({ text, logo, color = "bg-pag-bg-primary", href = "#" }: Props) {
+export default function Button({
+  asChild,
+  className,
+  ...props
+}: React.ComponentProps<"button"> & { asChild?: boolean }) {
+  const Comp = asChild ? Slot : "button";
   return (
-    <a
+    <Comp
       className={cn(
-        color,
         `
-      flex w-full items-center justify-center gap-pag-spacing-100 space-x-pag-sizing-25 rounded-pag-sm p-pag-spacing-100 text-pag-xl
-      text-pag-text-primary
-    `,
+          flex w-full items-center justify-center gap-pag-spacing-100 space-x-pag-sizing-25 rounded-pag-sm
+          bg-pag-bg-secondary p-pag-spacing-100 text-pag-xl
+        `,
+        className,
       )}
-      href={href}
-    >
-      {logo && <img src={logo} alt="Logo" className="h-pag-sizing-400 w-auto" />}
-      {text}
-    </a>
+      {...props}
+    />
   );
 }
