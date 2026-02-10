@@ -10,7 +10,8 @@ export default function Divider({ direction = "horizontal", className }: Props) 
     <div
       className={cn(
         "bg-pag-bg-tertiary",
-        direction === "horizontal" ? "h-pag-sizing-50 w-full" : `h-full w-pag-sizing-50`, className
+        direction === "horizontal" ? "h-pag-sizing-50 w-full" : `w-pag-sizing-50 self-stretch`,
+        className,
       )}
     />
   );
