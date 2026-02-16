@@ -21,7 +21,7 @@ export default function Login() {
       <img src={PagLogo} alt="PickAGame Logo" className="size-[100px]" />
       <h1 className="text-pag-2xl font-bold">Welcome back!</h1>
       <span className="text-pag-sm text-pag-text-muted">Simplify your gaming sessions now!</span>
-      <Button className="" asChild>
+      <Button className="text-pag-xl" asChild>
         <a href="#">
           <SteamIcon size={32} color="text-current" strokeWidth={0} />
           <span>Sign in with Steam</span>

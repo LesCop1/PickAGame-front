@@ -9,10 +9,32 @@ type ToggleGroupContextValue = {
 
 const ToggleGroupContext = React.createContext<ToggleGroupContextValue | null>(null);
 
-function ToggleGroup({ children, value, ...props }: ToggleGroupPrimitive.ToggleGroupSingleProps) {
+export type ToggleGroupProps = ToggleGroupPrimitive.ToggleGroupSingleProps & {
+  required?: boolean;
+};
+
+function ToggleGroup({ children, value: valueProp, defaultValue, onValueChange, required, ...props }: ToggleGroupProps) {
+  const isControlled = valueProp !== undefined;
+  const [uncontrolledValue, setUncontrolledValue] = React.useState<string | undefined>(defaultValue);
+
+  const value = isControlled ? valueProp : uncontrolledValue;
+
+  const handleValueChange = React.useCallback(
+    (nextValue: string) => {
+      if (required && nextValue === "") return;
+
+      if (!isControlled) {
+        setUncontrolledValue(nextValue);
+      }
+
+      onValueChange?.(nextValue);
+    },
+    [isControlled, onValueChange, required],
+  );
+
   return (
     <ToggleGroupContext.Provider value={{ value }}>
-      <ToggleGroupPrimitive.Root value={value} {...props}>
+      <ToggleGroupPrimitive.Root value={value} onValueChange={handleValueChange} {...props}>
         {children}
       </ToggleGroupPrimitive.Root>
     </ToggleGroupContext.Provider>
