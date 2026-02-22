@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 @import "tailwindcss";
+@import "tw-animate-css";
 @theme {
   /* Disable some TW styles */
   --color-*: initial;
@@ -9,12 +10,16 @@
   /* Background colors */
   --color-pag-bg-primary: #0b0f14;
   --color-pag-bg-secondary: #172033;
+  --color-pag-bg-secondary-hovered: #263654;
   --color-pag-bg-tertiary: #111827;
   --color-pag-bg-success: #1e9c04;
+  --color-pag-bg-success-hovered: #21ba00;
   --color-pag-bg-success-light: #1e9c041a;
   --color-pag-bg-error: #dc2626;
+  --color-pag-bg-error-hovered: #ef4444;
   --color-pag-bg-error-light: #dc26261a;
   --color-pag-bg-accent: #003cbe;
+  --color-pag-bg-accent-hovered: #0051ff;
   --color-pag-bg-accent-light: #3961b6;
   --color-pag-bg-tag-flex: #38bdf814;
   --color-pag-bg-tag-short: #14b8a614;

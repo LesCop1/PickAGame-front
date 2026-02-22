@@ -8,8 +8,9 @@ export default function Slider({
   value,
   min = 0,
   max = 100,
+  variant = "light",
   ...props
-}: SliderPrimitive.SliderProps) {
+}: SliderPrimitive.SliderProps & { variant?: "light" | "dark" }) {
   const _values = React.useMemo(
     () => (Array.isArray(value) ? value : Array.isArray(defaultValue) ? defaultValue : [min, max]),
     [value, defaultValue, min, max],
@@ -27,7 +28,10 @@ export default function Slider({
     >
       <SliderPrimitive.Track
         data-slot="slider-track"
-        className="relative h-pag-sizing-75 grow rounded-pag-full bg-pag-scrollbar-track"
+        className={cn(
+          "relative h-pag-sizing-75 grow rounded-pag-full",
+          variant === "light" ? "bg-pag-scrollbar-track" : "bg-pag-bg-secondary",
+        )}
       >
         <SliderPrimitive.Range
           data-slot="slider-range"
